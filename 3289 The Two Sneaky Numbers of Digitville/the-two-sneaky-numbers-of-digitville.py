@@ -1,10 +1,10 @@
 class Solution(object):
     def getSneakyNumbers(self, nums):
-        twoNumbers = []
         nums.sort()
+        result = []
         i = 0
         while i < len(nums) - 1:
-            if not nums[i + 1] > nums[i]:
-                twoNumbers.append(nums[i + 1])
+            if nums[i] == nums[i + 1]:
+                result.append(nums[i + 1])
             i = i + 1
-        return twoNumbers
+        return result
